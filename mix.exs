@@ -3,8 +3,8 @@ defmodule Tau.Mixfile do
 
   def project do
     [ app: :tau,
-      version: "0.0.1",
-      elixir: "~> 0.10.1",
+      version: "0.0.2",
+      elixir: "~> 0.11.2",
       deps: deps ]
   end
 

@@ -1,15 +1,15 @@
 language: erlang
-env:
-  - ELIXIR="v0.15.1"
-  - ELIXIR="v0.14.3"
 otp_release:
-  - 17.1
+  - 17.3
 before_install:
-  - mkdir -p vendor/elixir
-  - wget -q https://github.com/elixir-lang/elixir/releases/download/$ELIXIR/Precompiled.zip && unzip -qq Precompiled.zip -d vendor/elixir
-  - export PATH="$PATH:$PWD/vendor/elixir/bin"
+  - wget http://s3.hex.pm/builds/elixir/v1.0.2.zip
+  - unzip -d elixir v1.0.2.zip
+before_script:
+  - export PATH=`pwd`/elixir/bin:$PATH
   - mix local.hex --force
-  - mix local.rebar
-script:
   - mix deps.get
-  - mix test
+script: mix test
+after_script:
+  - mix hex.config username $HEX_USERNAME
+  - mix hex.config key $HEX_KEY
+  - mix hex.docs

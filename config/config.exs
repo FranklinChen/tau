@@ -10,9 +10,10 @@ use Mix.Config
 
 # Sample configuration:
 #
-#     config :logger,
+#     config :logger, :console,
 #       level: :info,
-#       format: "$time $metadata[$level] $levelpad$message\n"
+#       format: "$date $time [$level] $metadata$message\n",
+#       metadata: [:user_id]
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment

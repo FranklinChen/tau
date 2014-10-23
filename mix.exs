@@ -2,10 +2,15 @@ defmodule Tau.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :tau,
-      version: "0.0.3",
-      elixir: "> 0.11.2",
-      deps: deps ]
+    [app: :tau,
+     version: "0.0.4",
+     elixir: "~> 1.0",
+     source_url: "https://github.com/FranklinChen/tau",
+     homepage_url: "https://github.com/FranklinChen/tau",
+     deps: deps,
+     description: "The mathematical constant tau",
+     package: package
+    ]
   end
 
   # Configuration for the OTP application
@@ -25,6 +30,14 @@ defmodule Tau.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:earmark, "~> 0.1", only: :dev},
+     {:ex_doc, "~> 0.6", only: :dev}]
+  end
+
+  defp package do
+    [contributors: ["FranklinChen"],
+     licenses: [[name: "BSD 3-Clause"]],
+     links: %{"GitHub" => "https://github.com/FranklinChen/tau"}
+    ]
   end
 end

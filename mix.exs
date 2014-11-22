@@ -35,8 +35,8 @@ defmodule Tau.Mixfile do
   end
 
   defp package do
-    [contributors: ["FranklinChen"],
-     licenses: [[name: "BSD 3-Clause"]],
+    [contributors: ["Franklin Chen"],
+     licenses: ["BSD 3-Clause"],
      links: %{"GitHub" => "https://github.com/FranklinChen/tau"}
     ]
   end

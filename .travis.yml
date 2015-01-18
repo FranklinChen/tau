@@ -13,3 +13,5 @@ after_script:
   - mix hex.config username $HEX_USERNAME
   - mix hex.config key $HEX_KEY
   - mix hex.docs
+  - MIX_ENV=docs mix deps.get
+  - MIX_ENV=docs mix inch.report

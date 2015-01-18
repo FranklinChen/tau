@@ -3,7 +3,7 @@ defmodule Tau.Mixfile do
 
   def project do
     [app: :tau,
-     version: "0.0.4",
+     version: "0.0.5",
      elixir: "~> 1.0",
      source_url: "https://github.com/FranklinChen/tau",
      homepage_url: "https://github.com/FranklinChen/tau",
@@ -31,6 +31,7 @@ defmodule Tau.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:earmark, "~> 0.1", only: :dev},
+     {:inch_ex, only: :docs},
      {:ex_doc, "~> 0.6", only: :dev}]
   end
 

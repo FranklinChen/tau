@@ -9,8 +9,9 @@ otp_release:
   - 17.0
   - 17.1
   - 17.4
-#  - 17.5
+  - 17.5
 sudo: false
+script: mix test
 after_script:
   - mix hex.config username $HEX_USERNAME
   - mix hex.config key $HEX_KEY

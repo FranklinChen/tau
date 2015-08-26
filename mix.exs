@@ -3,10 +3,8 @@ defmodule Tau.Mixfile do
 
   def project do
     [app: :tau,
-     version: "0.0.6",
+     version: "0.0.7",
      elixir: "~> 1.0",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
      source_url: "https://github.com/FranklinChen/tau",
      homepage_url: "https://github.com/FranklinChen/tau",
      deps: deps,
@@ -19,7 +17,7 @@ defmodule Tau.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    []
   end
 
   # Dependencies can be Hex packages:

@@ -12,7 +12,8 @@ defmodule Tau.Mixfile do
      source_url: "https://github.com/FranklinChen/tau",
      homepage_url: "https://github.com/FranklinChen/tau",
      description: "The mathematical constant tau",
-     package: package
+     package: package,
+     docs: [extras: ["README.md"]]
     ]
   end
 
@@ -35,7 +36,7 @@ defmodule Tau.Mixfile do
   defp deps do
     [{:earmark, "~> 0.1", only: :dev},
      {:inch_ex, only: :docs},
-     {:ex_doc, "~> 0.10", only: :dev}]
+     {:ex_doc, "~> 0.11", only: :dev}]
   end
 
   defp package do
